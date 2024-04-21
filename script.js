@@ -60,13 +60,16 @@ region.forEach(element => {
             })
     })
     let input = document.querySelector('input');
+    let countryInfo = document.querySelector('.country-info');
     let dropDownCon = document.querySelector('.dropDownCon')
 toggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
-    moon.classList.toggle('moons')
+    moon.classList.toggle('moons');
     input.classList.toggle('active')
     toggle.classList.toggle('active')
     dropDownCon.classList.toggle('active');
     dropDown.classList.toggle('active')
     dropElem.classList.toggle('active2')
+    countryInfo.classList.remove('country-info')
+    countryInfo.classList.toggle('active2')
 })

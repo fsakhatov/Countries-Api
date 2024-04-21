@@ -6,7 +6,7 @@
 }
 .moons{
     color: white;
-    background-color: #202C36;
+    /* background-color: #202C36; */
 }
 
 body{
@@ -17,7 +17,8 @@ body{
     font-family: "Nunito Sans", sans-serif;
 }
 .dark{
-    color: hsl(0, 0%, 98%) !important;
+    color: hsl(0, 0%, 98%) ;  
+    /* important */
     background-color: #2B3844;
 
 }
@@ -33,7 +34,7 @@ body{
 button{
     outline: none;
     border: none;
-    background: transparent;
+    background-color: transparent;
 }
 .toggle{
     font-size: 18px;
@@ -69,7 +70,6 @@ button{
 .dropDownCon{
     width: 200px;
     position: relative;
-    background-color: white;
     border-radius: 5px;
 }
 .dropDown{
@@ -154,4 +154,9 @@ i{
 .active2{
     color: white;
     background-color: #2B3844;
+}
+
+#info{
+    background-color: white ;
+    color: #2B3844;
 }
