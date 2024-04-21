@@ -30,6 +30,9 @@ function showCountry(data){
    <p><strong>Capital: </strong>${data.capital}</p>
 </div>`
 countryElem.appendChild(country)
+country.addEventListener('click', () => {
+    showCountryDetail(data)
+})
 }
 dropDown.addEventListener('click', () => {
    dropElem.classList.toggle('showDropDown');
@@ -59,6 +62,7 @@ region.forEach(element => {
             }
             })
     })
+    let country2 = document.querySelector('.country')
     let input = document.querySelector('input');
     let countryInfo = document.querySelector('.country-info');
     let dropDownCon = document.querySelector('.dropDownCon')
@@ -70,6 +74,43 @@ toggle.addEventListener('click', () => {
     dropDownCon.classList.toggle('active');
     dropDown.classList.toggle('active')
     dropElem.classList.toggle('active2')
-    countryInfo.classList.remove('country-info')
-    countryInfo.classList.toggle('active2')
+    // countryInfo.classList.toggle('country-info')
+    // countryInfo.classList.toggle('active2')
 })
+// const back = document.querySelector('.back');
+// const countryModal = document.querySelector('.countryModal');
+// back.addEventListener('click', () => {
+//    countryModal.classList.toggle('show')
+// })
+const countryModal = document.querySelector('.countryModal');
+function showCountryDetail(data){
+    countryModal.classList.toggle('show')
+    countryModal.innerHTML = `
+    <button class="back">Back</button>
+        <div class="modal">
+            <div class="leftModal">
+                <img src="${data.flags.svg}" alt="">
+            </div>
+            <div class="rightModal">
+                <h1>${data.name.common}</h1>
+                <div class="modalInfo">
+                    <div class="innerLeft inner">
+                        <p><strong>Native Name: </strong>${data['name']['common']}</p>
+                        <p ><strong>Population: </strong>${data.population.toLocaleString()}</p>
+                        <p><strong>Region: </strong>${data.region}</p>
+                        <p><strong>Sub-region: </strong>${data.subregion}</p>
+                    </div>
+                    <div class="innerRight inner">
+                        <p><strong>Capital: </strong>${data.capital}</p>
+                        <p ><strong>Top Level Domain: </strong>${data.tld}</p>
+                        <p><strong>Currencies: </strong>${Object.keys(data['currencies'])}</p>
+                        <p><strong>Languages: </strong>${Object.values(data['languages'])}</p>
+                    </div>
+                </div>
+            </div>
+        </div>`
+        const back = countryModal.querySelector('.back');
+  back.addEventListener('click', () => {
+   countryModal.classList.toggle('show')
+})
+}

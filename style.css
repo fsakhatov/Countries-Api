@@ -30,6 +30,7 @@ body{
 }
 .container:nth-child(1){
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* background-color: #202C36; */
 }
 button{
     outline: none;
@@ -114,6 +115,7 @@ i{
     grid-gap: 20px;
 }
 .country{
+    cursor: pointer;
     min-height: 350px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     width: 300px;
@@ -156,7 +158,66 @@ i{
     background-color: #2B3844;
 }
 
-#info{
-    background-color: white ;
-    color: #2B3844;
+.countryModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background-color: white;
+}
+.countryModal .modal .leftModal img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center;
+}
+.back{
+    position: absolute;
+    top: 3rem;
+    left: 30px;
+    background-color: #fdfdfd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+.modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.leftModal{
+    width: 50%;
+}
+.rightModal{
+    width: 50%;
+    margin-left: 40px;
+}
+.modalInfo{
+    display: flex;
+    justify-content: space-between;
+}
+.modalInfo p{
+    width: 220px;
+    padding-right: 10px;
+}
+.rightModal h1{
+    margin: 10px 0;
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+.inner p{
+    letter-spacing: 1px;
+}
+.inner p > strong{
+   font-weight: 600;
+}
+.show{
+    display: none;
 }
