@@ -74,14 +74,9 @@ toggle.addEventListener('click', () => {
     dropDownCon.classList.toggle('active');
     dropDown.classList.toggle('active')
     dropElem.classList.toggle('active2')
-    // countryInfo.classList.toggle('country-info')
-    // countryInfo.classList.toggle('active2')
+
 })
-// const back = document.querySelector('.back');
-// const countryModal = document.querySelector('.countryModal');
-// back.addEventListener('click', () => {
-//    countryModal.classList.toggle('show')
-// })
+
 const countryModal = document.querySelector('.countryModal');
 function showCountryDetail(data){
     countryModal.classList.toggle('show')

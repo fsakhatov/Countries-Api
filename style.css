@@ -6,7 +6,6 @@
 }
 .moons{
     color: white;
-    /* background-color: #202C36; */
 }
 
 body{
@@ -30,7 +29,6 @@ body{
 }
 .container:nth-child(1){
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    /* background-color: #202C36; */
 }
 button{
     outline: none;
