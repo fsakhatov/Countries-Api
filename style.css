@@ -4,12 +4,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+.moons{
+    color: white;
+    background-color: #202C36;
+}
+
 body{
     width: 100%;
     min-height: 100vh;
     background-color: hsl(0, 0%, 98%);
     color: black;
     font-family: "Nunito Sans", sans-serif;
+}
+.dark{
+    color: hsl(0, 0%, 98%) !important;
+    background-color: #2B3844;
+
 }
 .container{
     width: 100%;
@@ -28,6 +38,7 @@ button{
 .toggle{
     font-size: 18px;
     cursor: pointer;
+    color: black;
 }
 .toggle i{
     padding-right: 5px;
@@ -46,6 +57,8 @@ button{
     border: 0;
     font-size: 15px;
     letter-spacing: 0.5px;
+    background-color: transparent;
+    box-shadow: 1px 0 0 rgba(0, 0, 0, 0.3);
 }
 .form-control i{
     position: absolute;
@@ -56,6 +69,8 @@ button{
 .dropDownCon{
     width: 200px;
     position: relative;
+    background-color: white;
+    border-radius: 5px;
 }
 .dropDown{
    width: 100%;
@@ -66,6 +81,7 @@ button{
     justify-content: space-between;
     cursor: pointer;
     font-size: 15px;
+    background-color: white;
 }
 .dropDown p{
     letter-spacing: 0.5px;
@@ -78,7 +94,9 @@ button{
     padding: 10px 14px;
     width: 100%;
     border-radius: 5px;
-    background-color: white;
+    z-index: 5;
+    color: black;
+    background-color:white;
 }
 i{
     cursor: pointer;
@@ -86,6 +104,8 @@ i{
 .drop p{
     margin: 5px 0;
     cursor: pointer;
+    z-index: 3;
+
 }
 .countries{
     padding: 30px;
@@ -99,6 +119,8 @@ i{
     width: 300px;
     border-radius: 5px;
     overflow: hidden;
+    background-color: #202C36;
+    color: white;
 }
 .country-img{
     height: 250px;
@@ -124,4 +146,12 @@ i{
 }
 .showDropDown{
     display: none;
+}
+.active{
+    color: white;
+    background-color: inherit;
+}
+.active2{
+    color: white;
+    background-color: #2B3844;
 }
