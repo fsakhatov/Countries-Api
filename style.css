@@ -204,11 +204,13 @@ i{
 .modalInfo p{
     width: 220px;
     padding-right: 10px;
+    color: black;
 }
 .rightModal h1{
     margin: 10px 0;
     letter-spacing: 1px;
     font-size: 40px;
+    color: black;
 }
 .inner p{
     letter-spacing: 1px;
